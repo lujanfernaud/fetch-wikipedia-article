@@ -8,11 +8,11 @@ function fetchArticle() {
   var language = document.getElementById('language').value;
   var apiUrl = '.wikipedia.org/api/rest_v1/page/mobile-sections/';
   var title = document.getElementById('title').value;
-
   var url = http + language + apiUrl + title;
 
+  var json;
+  var sections;
   var article;
-  var articleHTML;
 
   var xmlhttp = new XMLHttpRequest(), json;
 
