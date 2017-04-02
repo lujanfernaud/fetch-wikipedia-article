@@ -1,6 +1,19 @@
 window.onload = function() {
+  var toggleButton = document.getElementById('toggle');
+  toggleButton.addEventListener('click', toggleSidebar);
+
   var button = document.getElementById('fetch');
   button.addEventListener('click', fetchArticle);
+};
+
+function toggleSidebar() {
+  var page = document.getElementById('page-container');
+
+  if (page.classList.contains('page-visible')) {
+    page.className = 'page-hidden';
+  } else {
+    page.className = 'page-visible';
+  }
 };
 
 function fetchArticle() {
