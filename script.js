@@ -4,7 +4,7 @@ window.onload = function() {
 
   var fetchButton = document.getElementById('button-fetch');
   fetchButton.addEventListener('click', fetchArticle);
-};
+}
 
 function toggleSidebar() {
   var page = document.getElementById('page-container');
@@ -14,7 +14,7 @@ function toggleSidebar() {
   } else {
     showPage(page);
   }
-};
+}
 
 function hidePage(page) { page.className = 'page-hidden'; }
 function showPage(page) { page.className = 'page-visible'; }
@@ -50,4 +50,4 @@ function fetchArticle() {
 
   xmlhttp.open('GET', url, true);
   xmlhttp.send();
-};
+}
