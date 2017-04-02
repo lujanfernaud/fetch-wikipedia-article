@@ -24,6 +24,8 @@ function fetchArticle() {
   var language = document.getElementById('input-language').value;
   var apiUrl = '.wikipedia.org/api/rest_v1/page/mobile-sections/';
   var title = document.getElementById('input-title').value;
+  if (title === '') { return false }
+
   var url = http + language + apiUrl + title;
 
   var json;
