@@ -10,11 +10,14 @@ function toggleSidebar() {
   var page = document.getElementById('page-container');
 
   if (page.classList.contains('page-visible')) {
-    page.className = 'page-hidden';
+    hidePage(page);
   } else {
-    page.className = 'page-visible';
+    showPage(page);
   }
 };
+
+function hidePage(page) { page.className = 'page-hidden'; }
+function showPage(page) { page.className = 'page-visible'; }
 
 function fetchArticle() {
   var http = 'https://'
@@ -36,6 +39,9 @@ function fetchArticle() {
       sections = json.lead.sections;
       article = document.getElementById('article')
       article.innerHTML = sections[0].text;
+
+      var page = document.getElementById('page-container');
+      showPage(page);
 
     } else if (xmlhttp.status === 404) {
       console.log('Page not found.');
