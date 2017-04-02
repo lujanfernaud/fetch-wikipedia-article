@@ -76,6 +76,7 @@ body {
 
 .page-hidden {
   left: 240px;
+  overflow: hidden;
 }
 
 #button-toggle {
