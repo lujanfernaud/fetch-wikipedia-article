@@ -37,18 +37,20 @@ body {
   padding: 20px;
 }
 
-#title {
+/* Form */
+
+#input-title {
   display: block;
   box-sizing: border-box;
   width: 200px;
 }
 
-#language {
+#input-language {
   display: block;
   width: 200px
 }
 
-#fetch {
+#button-fetch {
   display: block;
   width: 200px
 }
@@ -76,7 +78,7 @@ body {
   left: 240px;
 }
 
-#toggle-button {
+#button-toggle {
   position: relative;
   top: 1%;
   left: 0;

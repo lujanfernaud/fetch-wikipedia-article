@@ -1,9 +1,9 @@
 window.onload = function() {
-  var toggleButton = document.getElementById('toggle-button');
+  var toggleButton = document.getElementById('button-toggle');
   toggleButton.addEventListener('click', toggleSidebar);
 
-  var button = document.getElementById('fetch');
-  button.addEventListener('click', fetchArticle);
+  var fetchButton = document.getElementById('button-fetch');
+  fetchButton.addEventListener('click', fetchArticle);
 };
 
 function toggleSidebar() {
@@ -18,9 +18,9 @@ function toggleSidebar() {
 
 function fetchArticle() {
   var http = 'https://'
-  var language = document.getElementById('language').value;
+  var language = document.getElementById('input-language').value;
   var apiUrl = '.wikipedia.org/api/rest_v1/page/mobile-sections/';
-  var title = document.getElementById('title').value;
+  var title = document.getElementById('input-title').value;
   var url = http + language + apiUrl + title;
 
   var json;
