@@ -17,6 +17,22 @@
   padding: 20px;
 }
 
+#title {
+  display: block;
+  box-sizing: border-box;
+  width: 200px;
+}
+
+#language {
+  display: block;
+  width: 200px
+}
+
+#fetch {
+  display: block;
+  width: 200px
+}
+
 /* Page
   ====================================================== */
 
