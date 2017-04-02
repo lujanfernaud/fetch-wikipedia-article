@@ -6,7 +6,9 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <main>
+
+  <div id="sidebar-container">
+    <div id="sidebar">
       <input type="text" placeholder="Title" id="title">
       <select id="language">
         <option value="en">English</option>
@@ -21,7 +23,14 @@
         <option value="it">Italiano</option>
       </select>
       <button id="fetch">Fetch</button>
-    <div id="article"></div>
-  </main>
+    </div>
+  </div>
+
+  <div id="page-container">
+    <main>
+      <div id="article"></div>
+    </main>
+  </div>
+
 </body>
 </html>
