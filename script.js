@@ -29,25 +29,40 @@ function fetchArticle() {
   var json;
   var sections;
   var article;
+  var page;
+  var warningMessage;
 
   var xmlhttp = new XMLHttpRequest(), json;
 
   xmlhttp.onreadystatechange = function() {
+    article = document.getElementById('article');
+    page = document.getElementById('page-container');
+    warningMessage = document.getElementById('warning-message');
+
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 
       json = JSON.parse(xmlhttp.responseText);
       sections = json.lead.sections;
-      article = document.getElementById('article')
       article.innerHTML = sections[0].text;
-
-      var page = document.getElementById('page-container');
-      showPage(page);
+      toggleWarning(warningMessage);
 
     } else if (xmlhttp.status === 404) {
-      console.log('Page not found.');
+
+      article.innerHTML = '';
+      toggleWarning(warningMessage);
     }
+
+    showPage(page);
   };
 
   xmlhttp.open('GET', url, true);
   xmlhttp.send();
+}
+
+function toggleWarning(warning) {
+  if (warning.classList.contains('warning-visible')) {
+    warning.className = 'warning-hidden';
+  } else {
+    warning.className = 'warning-visible';
+  }
 }
