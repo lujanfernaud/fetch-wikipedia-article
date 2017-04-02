@@ -94,3 +94,17 @@ body {
 #article {
   position: relative;
 }
+
+/* Warning: Article not found */
+
+#warning-message {
+  text-align: center;
+}
+
+.warning-hidden {
+  display: none;
+}
+
+.warning-visible {
+  display: block;
+}
