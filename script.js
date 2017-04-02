@@ -44,12 +44,12 @@ function fetchArticle() {
       json = JSON.parse(xmlhttp.responseText);
       sections = json.lead.sections;
       article.innerHTML = sections[0].text;
-      toggleWarning(warningMessage);
+      warningMessage.className = 'warning-hidden';
 
-    } else if (xmlhttp.status === 404) {
+    } else if (xmlhttp.status === 404 || xmlhttp.readyState === 4 && xmlhttp.status === 0) {
 
       article.innerHTML = '';
-      toggleWarning(warningMessage);
+      warningMessage.className = 'warning-visible';
     }
 
     showPage(page);
@@ -57,12 +57,4 @@ function fetchArticle() {
 
   xmlhttp.open('GET', url, true);
   xmlhttp.send();
-}
-
-function toggleWarning(warning) {
-  if (warning.classList.contains('warning-visible')) {
-    warning.className = 'warning-hidden';
-  } else {
-    warning.className = 'warning-visible';
-  }
 }
