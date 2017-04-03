@@ -1,11 +1,11 @@
 /**
- * Project: Wikipedia Articles Fetcher
+ * Project: Wikipedia Reader
  * Author: Lujan Fernaud
  * Github: www.github.com/lujanfernaud
  */
 
 
-/* Body, Initial Settings, & Helper Classes
+/* Body & Initial Settings
   ====================================================== */
 
 
@@ -21,7 +21,6 @@ body {
     font-size: 21px;
   }
 }
-
 a {
   text-decoration: none;
   color: #0645ad;
@@ -30,15 +29,12 @@ a:hover,
 a:focus {
   text-decoration: underline;
 }
-
 table {
   font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
 }
-
 img {
   max-width: 100%;
 }
-
 ol,
 ul {
   padding: 0;
@@ -87,6 +83,7 @@ ul {
   border: none;
 }
 
+
 /* Page
   ====================================================== */
 
@@ -108,7 +105,6 @@ ul {
   left: 240px;
   overflow: hidden;
 }
-
 #button-toggle {
   position: relative;
   top: -6px;
@@ -120,6 +116,8 @@ ul {
   color: #000;
   text-decoration: none;
 }
+
+/* Article */
 
 #article-title {
   position: relative;
@@ -219,7 +217,6 @@ ul {
     border: 0;
   }
 }
-
 .content table.infobox {
   font-size: 80%;
   position: relative;
@@ -245,7 +242,6 @@ ul {
 .content table.infobox tr:last-child td {
   border: 0;
 }
-
 table.wikitable {
   margin: 1em 0;
   background-color: #f8f9fa;
@@ -293,7 +289,8 @@ ul.gallery {
   padding: 2px;
   display: block;
 }
-ul.gallery, li.gallerybox {
+ul.gallery,
+li.gallerybox {
   zoom: 1;
 }
 li.gallerybox {
