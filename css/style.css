@@ -120,6 +120,11 @@ ul {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+@media (max-width: 425px) {
+  #article-title {
+    min-width: 280px;
+  }
+}
 @media (min-width: 801px) {
   #article-title {
     padding-left: 4%;
@@ -142,6 +147,11 @@ ul {
 
 #article {
   position: relative;
+}
+@media (max-width: 425px) {
+  #article {
+    min-width: 280px;
+  }
 }
 @media (min-width: 801px) {
   #article {
