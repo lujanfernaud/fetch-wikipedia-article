@@ -11,11 +11,29 @@
 
 body {
   font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  line-height: 1.618;
-  background-color: #fff;
+  font-size: 18px;
+  line-height: 1.650;
+  color: #222222;
+  background: #fff;
+}
+@media (min-width: 1026px) {
+  body {
+    font-size: 20px;
+  }
 }
 
+a {
+  text-decoration: none;
+  color: #0645ad;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+table {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
+}
 
 /* Sidebar
   ====================================================== */
@@ -31,7 +49,6 @@ body {
   height: 100%;
   background-color: #EAECF0;
 }
-
 #sidebar {
   position: relative;
   padding: 20px;
@@ -44,12 +61,10 @@ body {
   box-sizing: border-box;
   width: 200px;
 }
-
 #input-language {
   display: block;
   width: 200px
 }
-
 #button-fetch {
   display: block;
   width: 200px
@@ -70,11 +85,9 @@ body {
   background: #fff;
   transition: left 0.25s ease-in-out;
 }
-
 .page-visible {
   left: 0;
 }
-
 .page-hidden {
   left: 240px;
   overflow: hidden;
@@ -101,11 +114,9 @@ body {
 #warning-message {
   text-align: center;
 }
-
 .warning-hidden {
   display: none;
 }
-
 .warning-visible {
   display: block;
 }
@@ -114,51 +125,51 @@ body {
 /* MediaWiki Common.css modifications
   ====================================================== */
 
-/* Mobile redesign */
-
-table {
-  border-collapse: collapse;
-}
-.content table {
-  float: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-.content table {
-  margin: 1em 0;
-  overflow: auto;
-  overflow-y: hidden;
-  overflow-x: auto;
-  display: block;
-  width: 100% !important;
-}
-.content table.infobox {
-  font-size: 90%;
-  position: relative;
-  border: 0;
-  margin-bottom: 2em;
-  padding: 0;
-  text-align: left;
-  background-color: #f8f9fa;
-}
-.content table.infobox th, .content table.infobox td {
-  vertical-align: top;
-  border: 0;
-  border-bottom: 1px solid #dddddd;
-  padding: 0.2em;
-}
-.content table.infobox.geography .mergedtoprow td, .content table.infobox.geography .mergedtoprow th {
-  padding-bottom: 0.5px;
-}
-.content table.infobox.geography .mergedrow td, .content table.infobox.geography .mergedrow th {
-  padding-bottom: 0.5px;
-}
-.content table.infobox th, .content table.infobox td {
-  vertical-align: top;
-  border: 0;
-  border-bottom: 1px solid #dddddd;
-  padding: 0.2em;
-}
-.content table.infobox tr:last-child th, .content table.infobox tr:last-child td {
-  border: 0;
+@media (max-width: 1025px) {
+  table {
+    border-collapse: collapse;
+  }
+  .content table {
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .content table {
+    margin: 1em 0;
+    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: block;
+    width: 100% !important;
+  }
+  .content table.infobox {
+    font-size: 90%;
+    position: relative;
+    border: 0;
+    margin-bottom: 2em;
+    padding: 0;
+    text-align: left;
+    background-color: #f8f9fa;
+  }
+  .content table.infobox th, .content table.infobox td {
+    vertical-align: top;
+    border: 0;
+    border-bottom: 1px solid #dddddd;
+    padding: 0.2em;
+  }
+  .content table.infobox.geography .mergedtoprow td, .content table.infobox.geography .mergedtoprow th {
+    padding-bottom: 0.5px;
+  }
+  .content table.infobox.geography .mergedrow td, .content table.infobox.geography .mergedrow th {
+    padding-bottom: 0.5px;
+  }
+  .content table.infobox th, .content table.infobox td {
+    vertical-align: top;
+    border: 0;
+    border-bottom: 1px solid #dddddd;
+    padding: 0.2em;
+  }
+  .content table.infobox tr:last-child th, .content table.infobox tr:last-child td {
+    border: 0;
+  }
 }
