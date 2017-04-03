@@ -38,29 +38,7 @@ table {
 img {
   max-width: 100%;
 }
-figure,
-.thumb {
-  margin-left: 0;
-  margin-right: 0;
-  padding: 3px;
-  background-color: #f8f9fa;
-  text-align: center;
-  overflow: hidden;
-}
-figcaption,
-.thumbcaption {
-  padding: 3px;
-  font-size: 90%;
-  line-height: 1.4em;
-  text-align: center;
-  border: 0;
-}
-.thumb,
-.thumbinner,
-.tsingle {
-  width: auto !important;
-  max-width: initial !important;
-}
+
 
 /* Sidebar
   ====================================================== */
@@ -243,4 +221,75 @@ figcaption,
   .content table.infobox tr:last-child th, .content table.infobox tr:last-child td {
     border: 0;
   }
+}
+
+/* Images and gallerybox */
+
+figure,
+.thumb {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 3px;
+  background-color: #f8f9fa;
+  text-align: center;
+  overflow: hidden;
+}
+figcaption,
+.thumbcaption {
+  padding: 3px;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
+  font-size: 75%;
+  line-height: 1.4em;
+  text-align: center;
+  border: 0;
+}
+.thumb,
+.thumbinner,
+.tsingle {
+  width: auto !important;
+  max-width: initial !important;
+}
+ul.gallery {
+  margin: 2px;
+  padding: 2px;
+  display: block;
+}
+ul.gallery, li.gallerybox {
+  zoom: 1;
+}
+li.gallerybox {
+  vertical-align: top;
+  display: -moz-inline-box;
+  display: inline-block;
+}
+li.gallerybox div.thumb {
+  margin: 2px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 1px solid #c8ccd1;
+}
+div.gallerytext {
+  overflow: hidden;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
+  font-size: 75%;
+  line-height: 1.6;
+  padding: 2px 4px;
+  word-wrap: break-word;
+}
+
+/* Tables */
+
+table.wikitable {
+  margin: 1em 0;
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  border-collapse: collapse;
+  color: #000;
+}
+table.wikitable > tr > th,
+table.wikitable > tr > td,
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td {
+  border: 1px solid #a2a9b1;
+  padding: 0.2em 0.4em;
 }
