@@ -13,20 +13,24 @@
 
   <div id="sidebar-container">
     <div id="sidebar">
-      <input type="text" placeholder="Title" id="input-title">
-      <select id="input-language">
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="zh">中文</option>
-        <option value="ru">Русский</option>
-        <option value="ja">日本語</option>
-        <option value="ko">한국어</option>
-        <option value="hu">Magyar</option>
-        <option value="fr">Français</option>
-        <option value="de">Deutsch</option>
-        <option value="it">Italiano</option>
-      </select>
-      <button id="button-fetch">Fetch</button>
+
+      <form>
+        <input type="text" placeholder="Search Wikipedia" id="input-title" onclick="this.focus();this.select()" autofocus>
+        <select id="input-language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh">中文</option>
+          <option value="ru">Русский</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+          <option value="hu">Magyar</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="it">Italiano</option>
+        </select>
+        <button type="submit" id="button-fetch">Fetch</button>
+      </form>
+
     </div>
   </div>
 
