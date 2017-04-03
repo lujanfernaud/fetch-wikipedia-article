@@ -33,10 +33,16 @@ a:focus {
 
 table {
   font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
+  font-size: 80%;
 }
 
 img {
   max-width: 100%;
+}
+
+ol,
+ul {
+  padding: 0;
 }
 
 
@@ -174,6 +180,9 @@ img {
 /* MediaWiki Common.css modifications
   ====================================================== */
 
+
+/* Tables */
+
 @media (max-width: 767px) {
   table {
     border-collapse: collapse;
@@ -192,35 +201,49 @@ img {
     width: 100% !important;
   }
   .content table.infobox {
-    font-size: 90%;
-    position: relative;
-    border: 0;
-    margin-bottom: 2em;
-    padding: 0;
-    text-align: left;
-    background-color: #f8f9fa;
-  }
-  .content table.infobox th, .content table.infobox td {
-    vertical-align: top;
-    border: 0;
-    border-bottom: 1px solid #dddddd;
-    padding: 0.2em;
-  }
-  .content table.infobox.geography .mergedtoprow td, .content table.infobox.geography .mergedtoprow th {
-    padding-bottom: 0.5px;
-  }
-  .content table.infobox.geography .mergedrow td, .content table.infobox.geography .mergedrow th {
-    padding-bottom: 0.5px;
-  }
-  .content table.infobox th, .content table.infobox td {
-    vertical-align: top;
-    border: 0;
-    border-bottom: 1px solid #dddddd;
-    padding: 0.2em;
-  }
-  .content table.infobox tr:last-child th, .content table.infobox tr:last-child td {
     border: 0;
   }
+}
+
+.content table.infobox {
+  font-size: 80%;
+  position: relative;
+  margin-bottom: 2em;
+  text-align: left;
+  background-color: #f8f9fa;
+}
+.content table.infobox th,
+.content table.infobox td {
+  vertical-align: top;
+  border: 0;
+  padding: 0.2em;
+}
+.content table.infobox.geography .mergedtoprow td,
+.content table.infobox.geography .mergedtoprow th {
+  padding-bottom: 0.5px;
+}
+.content table.infobox.geography .mergedrow td,
+.content table.infobox.geography .mergedrow th {
+  padding-bottom: 0.5px;
+}
+.content table.infobox tr:last-child th,
+.content table.infobox tr:last-child td {
+  border: 0;
+}
+
+table.wikitable {
+  margin: 1em 0;
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  border-collapse: collapse;
+  color: #000;
+}
+table.wikitable > tr > th,
+table.wikitable > tr > td,
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td {
+  border: 1px solid #a2a9b1;
+  padding: 0.2em 0.4em;
 }
 
 /* Images and gallerybox */
@@ -275,21 +298,4 @@ div.gallerytext {
   line-height: 1.6;
   padding: 2px 4px;
   word-wrap: break-word;
-}
-
-/* Tables */
-
-table.wikitable {
-  margin: 1em 0;
-  background-color: #f8f9fa;
-  border: 1px solid #a2a9b1;
-  border-collapse: collapse;
-  color: #000;
-}
-table.wikitable > tr > th,
-table.wikitable > tr > td,
-table.wikitable > * > tr > th,
-table.wikitable > * > tr > td {
-  border: 1px solid #a2a9b1;
-  padding: 0.2em 0.4em;
 }
