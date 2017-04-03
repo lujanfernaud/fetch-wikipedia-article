@@ -66,20 +66,26 @@ ul {
 
 /* Form */
 
-#input-title {
+#input-title,
+#input-language,
+#button-fetch {
   display: block;
   box-sizing: border-box;
   width: 200px;
+  height: 35px;
+  margin-bottom: 11px;
+  font-size: 16px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
 }
 #input-language {
-  display: block;
-  width: 200px
+  padding-left: 6px;
 }
-#button-fetch {
-  display: block;
-  width: 200px
+#input-title {
+  padding-left: 9px;
+  border: none;
 }
-
 
 /* Page
   ====================================================== */
