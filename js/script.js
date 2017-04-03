@@ -4,6 +4,9 @@ window.onload = function() {
 
   var fetchButton = document.getElementById('button-fetch');
   fetchButton.addEventListener('click', fetchArticle);
+
+  var inputTitle = document.getElementById('input-title');
+  inputTitle.focus();
 }
 
 function toggleSidebar() {
