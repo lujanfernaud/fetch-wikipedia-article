@@ -33,7 +33,6 @@ a:focus {
 
 table {
   font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
-  font-size: 80%;
 }
 
 img {
@@ -236,6 +235,7 @@ table.wikitable {
   background-color: #f8f9fa;
   border: 1px solid #a2a9b1;
   border-collapse: collapse;
+  font-size: 80%;
   color: #000;
 }
 table.wikitable > tr > th,
