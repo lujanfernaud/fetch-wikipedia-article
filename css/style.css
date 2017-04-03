@@ -299,3 +299,12 @@ div.gallerytext {
   padding: 2px 4px;
   word-wrap: break-word;
 }
+
+
+/* Footer
+  ====================================================== */
+
+
+footer {
+  height: 4em;
+}
