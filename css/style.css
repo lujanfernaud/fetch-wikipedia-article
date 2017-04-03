@@ -109,3 +109,56 @@ body {
 .warning-visible {
   display: block;
 }
+
+
+/* MediaWiki Common.css modifications
+  ====================================================== */
+
+/* Mobile redesign */
+
+table {
+  border-collapse: collapse;
+}
+.content table {
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.content table {
+  margin: 1em 0;
+  overflow: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: block;
+  width: 100% !important;
+}
+.content table.infobox {
+  font-size: 90%;
+  position: relative;
+  border: 0;
+  margin-bottom: 2em;
+  padding: 0;
+  text-align: left;
+  background-color: #f8f9fa;
+}
+.content table.infobox th, .content table.infobox td {
+  vertical-align: top;
+  border: 0;
+  border-bottom: 1px solid #dddddd;
+  padding: 0.2em;
+}
+.content table.infobox.geography .mergedtoprow td, .content table.infobox.geography .mergedtoprow th {
+  padding-bottom: 0.5px;
+}
+.content table.infobox.geography .mergedrow td, .content table.infobox.geography .mergedrow th {
+  padding-bottom: 0.5px;
+}
+.content table.infobox th, .content table.infobox td {
+  vertical-align: top;
+  border: 0;
+  border-bottom: 1px solid #dddddd;
+  padding: 0.2em;
+}
+.content table.infobox tr:last-child th, .content table.infobox tr:last-child td {
+  border: 0;
+}
