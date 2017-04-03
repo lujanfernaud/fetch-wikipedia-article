@@ -16,7 +16,7 @@ body {
   color: #222222;
   background: #fff;
 }
-@media (min-width: 1026px) {
+@media (min-width: 1025px) {
   body {
     font-size: 20px;
   }
@@ -109,16 +109,48 @@ table {
   position: relative;
   margin-top: 20px;
   margin-bottom: 30px;
-  min-width: 900px;
-  padding-left: 23%;
-  padding-right: 23%;
+}
+@media (min-width: 768px) {
+  #article-title {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media (min-width: 1025px) {
+  #article-title {
+    min-width: 900px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+@media (min-width: 1281px) {
+  #article-title {
+    padding-left: 23%;
+    padding-right: 23%;
+  }
 }
 
 #article {
   position: relative;
-  min-width: 900px;
-  padding-left: 23%;
-  padding-right: 23%;
+}
+@media (min-width: 768px) {
+  #article {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media (min-width: 1025px) {
+  #article {
+    min-width: 900px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+@media (min-width: 1281px) {
+  #article {
+    padding-left: 23%;
+    padding-right: 23%;
+  }
 }
 
 /* Warning: Article not found */
