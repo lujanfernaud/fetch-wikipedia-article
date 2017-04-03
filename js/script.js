@@ -46,6 +46,7 @@ function fetchArticle() {
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 
       json = JSON.parse(xmlhttp.responseText);
+      console.log(json);
       title = json.lead.displaytitle;
       sections = json.lead.sections;
       articleTitle.innerHTML = title;
@@ -60,6 +61,49 @@ function fetchArticle() {
     }
 
     showPage(page);
+  };
+
+  xmlhttp.open('GET', url, true);
+  xmlhttp.send();
+
+  fetchRemainingSections(url);
+}
+
+function fetchRemainingSections(url) {
+  var xmlhttp = new XMLHttpRequest(), json;
+
+  xmlhttp.onreadystatechange = function() {
+    var article = document.getElementById('article');
+
+    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+
+      json = JSON.parse(xmlhttp.responseText);
+      var remainingSections = json.remaining.sections;
+
+      for (i = 0; i < remainingSections.length; i++) {
+        switch (remainingSections[i].toclevel) {
+          case 1:
+            article.innerHTML += '<h2>' + remainingSections[i].line + '</h2>';
+            break;
+          case 2:
+            article.innerHTML += '<h3>' + remainingSections[i].line + '</h3>';
+            break;
+          case 3:
+            article.innerHTML += '<h4>' + remainingSections[i].line + '</h4>';
+            break;
+          case 4:
+            article.innerHTML += '<h5>' + remainingSections[i].line + '</h5>';
+            break;
+          case 5:
+            article.innerHTML += '<h6>' + remainingSections[i].line + '</h6>';
+            break;
+          case 6:
+            article.innerHTML += '<h6>' + remainingSections[i].line + '</h6>';
+            break;
+        }
+        article.innerHTML += remainingSections[i].text;
+      }
+    }
   };
 
   xmlhttp.open('GET', url, true);
