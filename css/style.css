@@ -105,8 +105,20 @@ table {
   text-decoration: none;
 }
 
+#article-title {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  min-width: 900px;
+  padding-left: 23%;
+  padding-right: 23%;
+}
+
 #article {
   position: relative;
+  min-width: 900px;
+  padding-left: 23%;
+  padding-right: 23%;
 }
 
 /* Warning: Article not found */
