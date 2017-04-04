@@ -29,6 +29,9 @@ a:hover,
 a:focus {
   text-decoration: underline;
 }
+a:focus {
+  outline-color: #36c;
+}
 table {
   font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
 }
