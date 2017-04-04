@@ -5,7 +5,7 @@
  */
 
 
-/* Body & Initial Settings
+/* Body and initial settings
   ====================================================== */
 
 
@@ -166,7 +166,6 @@ img {
     padding-right: 23%;
   }
 }
-
 #article-hatnotes {
   font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
   font-size: 80%;
@@ -182,37 +181,45 @@ img {
 #article > .infobox + .hatnote {
   display: none;
 }
-
 #article {
   position: relative;
 }
 @media (max-width: 425px) {
-  #article {
+  .article-container {
     min-width: 280px;
   }
 }
 @media (min-width: 801px) {
-  #article {
+  .article-container {
     padding-left: 4%;
     padding-right: 4%;
   }
 }
 @media (min-width: 1025px) {
-  #article {
+  .article-container {
     min-width: 900px;
     padding-left: 20%;
     padding-right: 20%;
   }
 }
 @media (min-width: 1281px) {
-  #article {
+  .article-container {
     padding-left: 23%;
     padding-right: 23%;
   }
 }
 
-/* Warning: Article not found */
+/* Fetching and warning messages */
 
+#fetching-message {
+  text-align: center;
+}
+.fetching-hidden {
+  display: none;
+}
+.fetching-visible {
+  display: block;
+}
 #warning-message {
   text-align: center;
 }
