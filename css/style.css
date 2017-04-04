@@ -35,10 +35,6 @@ table {
 img {
   max-width: 100%;
 }
-ol,
-ul {
-  padding: 0;
-}
 
 
 /* Sidebar
@@ -275,6 +271,9 @@ table.wikitable > * > tr > th,
 table.wikitable > * > tr > td {
   border: 1px solid #a2a9b1;
   padding: 0.2em 0.4em;
+}
+td > .plainlist > ul {
+  padding: 0;
 }
 
 /* Images and gallerybox */
