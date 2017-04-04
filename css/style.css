@@ -357,6 +357,13 @@ div.gallerytext {
   word-wrap: break-word;
 }
 
+/* Hatnotes */
+
+.hatnote {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
+  font-size: 80%;
+  padding-left: 0 !important;
+}
 
 /* Footer
   ====================================================== */
