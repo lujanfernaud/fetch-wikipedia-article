@@ -32,7 +32,9 @@ function fetchArticle() {
   var url = http + language + apiUrl + title;
 
   var json;
+  var title;
   var sections;
+  var remainingSections;
   var article;
   var articleTitle;
   var page;
@@ -52,36 +54,11 @@ function fetchArticle() {
       console.log(json);
       title = json.lead.displaytitle;
       sections = json.lead.sections;
+      remainingSections = json.remaining.sections;
+
       articleTitle.innerHTML = title;
       article.innerHTML = sections[0].text;
       warningMessage.className = 'warning-hidden';
-
-    } else if (xmlhttp.status === 404 || xmlhttp.readyState === 4 && xmlhttp.status === 0) {
-
-      articleTitle.innerHTML = '';
-      article.innerHTML = '';
-      warningMessage.className = 'warning-visible';
-    }
-
-    showPage(page);
-  };
-
-  xmlhttp.open('GET', url, true);
-  xmlhttp.send();
-
-  fetchRemainingSections(url);
-}
-
-function fetchRemainingSections(url) {
-  var xmlhttp = new XMLHttpRequest(), json;
-
-  xmlhttp.onreadystatechange = function() {
-    var article = document.getElementById('article');
-
-    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-
-      json = JSON.parse(xmlhttp.responseText);
-      var remainingSections = json.remaining.sections;
 
       for (i = 0; i < remainingSections.length; i++) {
         switch (remainingSections[i].toclevel) {
@@ -106,7 +83,15 @@ function fetchRemainingSections(url) {
         }
         article.innerHTML += remainingSections[i].text;
       }
+
+    } else if (xmlhttp.status === 404 || xmlhttp.readyState === 4 && xmlhttp.status === 0) {
+
+      articleTitle.innerHTML = '';
+      article.innerHTML = '';
+      warningMessage.className = 'warning-visible';
     }
+
+    showPage(page);
   };
 
   xmlhttp.open('GET', url, true);
