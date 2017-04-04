@@ -40,16 +40,26 @@ function fetchArticle() {
   var articleHatnotes;
   var article;
   var page;
+  var fetchingText = document.getElementById('fetching-message');
   var warningMessage;
 
   var xmlhttp = new XMLHttpRequest(), json;
 
+  xmlhttp.onprogress = function() {
+    articleTitle.innerHTML = '';
+    articleHatnotes.innerHTML = '';
+    fetchingText.className = 'fetching-visible';
+    article.innerHTML = '';
+  };
+
   xmlhttp.onreadystatechange = function() {
+    fetchingText.className = 'fetching-hidden';
+
     articleTitle = document.getElementById('article-title');
     articleHatnotes = document.getElementById('article-hatnotes');
     article = document.getElementById('article');
-    page = document.getElementById('page-container');
     warningMessage = document.getElementById('warning-message');
+    page = document.getElementById('page-container');
 
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 
@@ -102,6 +112,7 @@ function fetchArticle() {
     } else if (xmlhttp.status === 404 || xmlhttp.readyState === 4 && xmlhttp.status === 0) {
 
       articleTitle.innerHTML = '';
+      articleHatnotes.innerHTML = '';
       article.innerHTML = '';
       warningMessage.className = 'warning-visible';
     }
