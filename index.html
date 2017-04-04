@@ -13,7 +13,6 @@
 
   <div id="sidebar-container">
     <div id="sidebar">
-
       <form>
         <input type="text" placeholder="Search Wikipedia" id="input-title" onclick="this.focus();this.select()">
         <select id="input-language">
@@ -30,7 +29,6 @@
         </select>
         <button type="submit" id="button-fetch">Fetch</button>
       </form>
-
     </div>
   </div>
 
@@ -43,9 +41,11 @@
       </div>
     </header>
 
-    <main>
+    <main class="article-container">
       <div id="article" class="content"></div>
-      <div>
+
+      <div class="messages">
+        <p id="fetching-message" class="fetching-hidden">This seems to be a heavy article. Give me just a sec...</p>
         <p id="warning-message" class="warning-hidden">Sorry. That article was not found.</p>
       </div>
     </main>
