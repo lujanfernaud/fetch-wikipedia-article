@@ -64,7 +64,7 @@ function fetchArticle() {
       if (leadHatnotes.length === 0) {
         articleHatnotes.innerHTML = '';
       } else if (leadHatnotes.length === 1) {
-        articleHatnotes.innerHTML = '<li>' + leadHatnotes[i] + '</li>';
+        articleHatnotes.innerHTML = '<li>' + leadHatnotes + '</li>';
       } else if (leadHatnotes.length > 1) {
         articleHatnotes.innerHTML = '';
         for (i = 0; i < leadHatnotes.length; i++) {
