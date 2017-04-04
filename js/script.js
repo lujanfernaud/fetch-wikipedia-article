@@ -33,30 +33,45 @@ function fetchArticle() {
 
   var json;
   var title;
+  var leadHatnotes;
   var sections;
   var remainingSections;
-  var article;
   var articleTitle;
+  var articleHatnotes;
+  var article;
   var page;
   var warningMessage;
 
   var xmlhttp = new XMLHttpRequest(), json;
 
   xmlhttp.onreadystatechange = function() {
-    article = document.getElementById('article');
     articleTitle = document.getElementById('article-title');
+    articleHatnotes = document.getElementById('article-hatnotes');
+    article = document.getElementById('article');
     page = document.getElementById('page-container');
     warningMessage = document.getElementById('warning-message');
 
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 
       json = JSON.parse(xmlhttp.responseText);
-      console.log(json);
       title = json.lead.displaytitle;
+      leadHatnotes = json.lead.hatnotes;
       sections = json.lead.sections;
       remainingSections = json.remaining.sections;
 
       articleTitle.innerHTML = title;
+
+      if (leadHatnotes.length === 0) {
+        articleHatnotes.innerHTML = '';
+      } else if (leadHatnotes.length === 1) {
+        articleHatnotes.innerHTML = '<li>' + leadHatnotes[i] + '</li>';
+      } else if (leadHatnotes.length > 1) {
+        articleHatnotes.innerHTML = '';
+        for (i = 0; i < leadHatnotes.length; i++) {
+          articleHatnotes.innerHTML += '<li>' + leadHatnotes[i] + '</li>';
+        }
+      }
+
       article.innerHTML = sections[0].text;
       warningMessage.className = 'warning-hidden';
 
