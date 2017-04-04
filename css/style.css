@@ -211,21 +211,15 @@ img {
 
 /* Fetching and warning messages */
 
-#fetching-message {
-  text-align: center;
-}
-.fetching-hidden {
-  display: none;
-}
-.fetching-visible {
-  display: block;
-}
+#fetching-message,
 #warning-message {
   text-align: center;
 }
+.fetching-hidden,
 .warning-hidden {
   display: none;
 }
+.fetching-visible,
 .warning-visible {
   display: block;
 }
@@ -364,6 +358,7 @@ div.gallerytext {
   font-size: 80%;
   padding-left: 0 !important;
 }
+
 
 /* Footer
   ====================================================== */
