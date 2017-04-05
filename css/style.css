@@ -168,7 +168,7 @@ img {
 }
 #article-hatnotes {
   font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
-  font-size: 80%;
+  font-size: 85%;
   font-style: italic;
   margin-bottom: 33px;
   padding-left: 0;
@@ -355,7 +355,7 @@ div.gallerytext {
 
 .hatnote {
   font-family: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
-  font-size: 80%;
+  font-size: 85%;
   padding-left: 0 !important;
 }
 
