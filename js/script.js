@@ -39,9 +39,9 @@ function fetchArticle() {
   var articleTitle;
   var articleHatnotes;
   var article;
-  var page;
   var fetchingText = document.getElementById('fetching-message');
   var warningMessage;
+  var page;
 
   var xmlhttp = new XMLHttpRequest(), json;
 
